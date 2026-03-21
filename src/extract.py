@@ -77,8 +77,8 @@ def cargar_config_rutas() -> dict:
     output_dir = base_dir / "output"
 
     return {
-        "productos": data_raw / "productos.xlsx",          # o productos.csv
-        "ventas_ecommerce": data_raw / "ventas_ecommerce.csv",
-        "ventas_local": data_raw / "ventas_local.csv",
+        "productos": data_raw / "productos.xlsx",        
+        "ventas_ecommerce": data_raw / "ventas_ecommerce.xlsx",
+        "ventas_local": data_raw / "ventas_local.xlsx",
         "output_dir": output_dir,
     }
