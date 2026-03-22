@@ -37,7 +37,7 @@ data-pipeline-commercial-sales/
 │  └─ pipeline.py     # Orquestador ETL de punta a punta
 ├─ data/
 │  ├─ raw/            # Archivos de entrada (CSV / Excel) de ejemplo
-│  └─ processed/      # Datos intermedios (opcional)
+│  └─ processed/      # Datos intermedios 
 ├─ output/            # Reportes generados (reporte_ventas_semanal.xlsx)
 ├─ notebooks/         # Análisis exploratorios y pruebas (EDA)
 ├─ .gitignore
