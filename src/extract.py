@@ -42,8 +42,6 @@ def leer_ventas_ecommerce(path: str) -> pd.DataFrame:
     return df
 
 
-import pandas as pd
-
 def leer_ventas_local(path: str) -> pd.DataFrame:
     if path.endswith('.csv'):
         df = pd.read_excel(path, encoding='utf-8')
