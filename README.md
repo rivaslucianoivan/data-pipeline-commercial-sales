@@ -16,6 +16,20 @@ Proyecto de portafolio para construir un **pipeline ETL** que toma datos de vent
 
 ---
 
+## Como ejecutarlo:
+
+### 1. Activar entorno virtual
+.\.venv\Scripts\activate  # Windows CMD/PowerShell
+
+### 2. Instalar dependencias
+pip install -r requirements.txt
+
+### 3. Ejecutar pipeline
+python -m src.pipeline
+
+---
+
+
 ## Stack técnico
 
 - **Python 3.x**
@@ -26,20 +40,25 @@ Proyecto de portafolio para construir un **pipeline ETL** que toma datos de vent
 
 ---
 
-## Estructura del repositorio (planificada)
+## Estructura del repositorio 
 
 ```text
 data-pipeline-commercial-sales/
-├─ src/
-│  ├─ extract.py      # Lectura de datasets (productos, ventas e‑commerce, ventas local)
-│  ├─ transform.py    # Limpieza, unificación, creación de KPIs
-│  ├─ load.py         # Generación del Excel final
-│  └─ pipeline.py     # Orquestador ETL de punta a punta
-├─ data/
-│  ├─ raw/            # Archivos de entrada (CSV / Excel) de ejemplo
-│  └─ processed/      # Datos intermedios 
-├─ output/            # Reportes generados (reporte_ventas_semanal.xlsx)
-├─ notebooks/         # Análisis exploratorios y pruebas (EDA)
-├─ .gitignore
-├─ requirements.txt
-└─ README.md
+├── src/
+│   ├── __init__.py
+│   ├── extract.py      # Lectura de datos CSV/Excel
+│   ├── transform.py    # Unificación, limpieza, KPIs
+│   ├── load.py         # Exportación a Excel con formato
+│   └── pipeline.py     # Orquestador ETL
+├── data/
+│   └── raw/            # Datasets de ejemplo
+│       ├── productos.xlsx
+│       ├── ventas_ecommerce.csv
+│       └── ventas_local.csv
+├── output/             # Reportes generados
+├── logs/               # Logs de ejecución
+├── notebooks/          # (Opcional) EDA y pruebas
+├── .gitignore
+├── requirements.txt
+└── README.md
+
