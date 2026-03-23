@@ -2,7 +2,9 @@ import pandas as pd
 from pathlib import Path
 
 def leer_productos(path: str) -> pd.DataFrame:
-    if path.endswith('.csv'):
+    path = Path(path)
+
+    if path.suffix == ".csv":
         df = pd.read_excel(path, encoding='utf-8')
     else:
         df = pd.read_excel(path)
@@ -19,7 +21,9 @@ def leer_productos(path: str) -> pd.DataFrame:
 
 
 def leer_ventas_ecommerce(path: str) -> pd.DataFrame:
-    if path.endswith('.csv'):
+    path = Path(path)
+
+    if path.suffix == ".csv":
         df = pd.read_excel(path, encoding='utf-8')
     else:
         df = pd.read_excel(path)
@@ -43,7 +47,9 @@ def leer_ventas_ecommerce(path: str) -> pd.DataFrame:
 
 
 def leer_ventas_local(path: str) -> pd.DataFrame:
-    if path.endswith('.csv'):
+    path = Path(path)
+
+    if path.suffix == ".csv":
         df = pd.read_excel(path, encoding='utf-8')
     else:
         df = pd.read_excel(path)

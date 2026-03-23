@@ -1,0 +1,130 @@
+2026-03-23 14:45:25,008 - INFO - Starting sales Excel pipeline
+2026-03-23 14:45:25,009 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 14:45:25,009 - ERROR - Pipeline failed: 'WindowsPath' object has no attribute 'endswith'
+Traceback (most recent call last):
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\pipeline.py", line 48, in run_pipeline
+    df_prod = leer_productos(paths["productos"])
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\extract.py", line 5, in leer_productos
+    if path.endswith('.csv'):
+       ^^^^^^^^^^^^^
+AttributeError: 'WindowsPath' object has no attribute 'endswith'
+2026-03-23 14:45:25,013 - INFO - Pipeline finished in 0.00 seconds
+2026-03-23 16:04:31,117 - INFO - Starting sales Excel pipeline
+2026-03-23 16:04:31,118 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 16:04:32,390 - INFO - Products loaded: 40
+2026-03-23 16:04:32,391 - INFO - E-commerce rows loaded: 211
+2026-03-23 16:04:32,391 - INFO - Local POS rows loaded: 150
+2026-03-23 16:04:32,404 - INFO - Unified raw rows: 361
+2026-03-23 16:04:32,404 - INFO - Clean rows after enrichment: 361
+2026-03-23 16:04:32,428 - INFO - Generated KPI tables: resumen_diario, por_categoria, top_productos
+2026-03-23 16:04:32,428 - INFO - Generated summary tables: tabla_dia_canal, tabla_categoria_canal
+2026-03-23 16:04:32,430 - ERROR - Pipeline failed: No module named 'xlsxwriter'
+Traceback (most recent call last):
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\pipeline.py", line 75, in run_pipeline
+    exportar_a_excel(df_raw, df_clean, kpis, tablas, output_path)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 14, in exportar_a_excel
+    with pd.ExcelWriter(output_path, engine="xlsxwriter", datetime_format="yyyy-mm-dd") as writer:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\anaconda3\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
+2026-03-23 16:04:32,439 - INFO - Pipeline finished in 1.32 seconds
+2026-03-23 16:08:22,221 - INFO - Starting sales Excel pipeline
+2026-03-23 16:08:22,222 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 16:08:22,521 - INFO - Products loaded: 40
+2026-03-23 16:08:22,521 - INFO - E-commerce rows loaded: 211
+2026-03-23 16:08:22,521 - INFO - Local POS rows loaded: 150
+2026-03-23 16:08:22,530 - INFO - Unified raw rows: 361
+2026-03-23 16:08:22,530 - INFO - Clean rows after enrichment: 361
+2026-03-23 16:08:22,545 - INFO - Generated KPI tables: resumen_diario, por_categoria, top_productos
+2026-03-23 16:08:22,545 - INFO - Generated summary tables: tabla_dia_canal, tabla_categoria_canal
+2026-03-23 16:08:22,546 - ERROR - Pipeline failed: No module named 'xlsxwriter'
+Traceback (most recent call last):
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\pipeline.py", line 75, in run_pipeline
+    exportar_a_excel(df_raw, df_clean, kpis, tablas, output_path)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 14, in exportar_a_excel
+    with pd.ExcelWriter(output_path, engine="xlsxwriter", datetime_format="yyyy-mm-dd") as writer:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\anaconda3\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
+2026-03-23 16:08:22,550 - INFO - Pipeline finished in 0.33 seconds
+2026-03-23 16:21:49,029 - INFO - Starting sales Excel pipeline
+2026-03-23 16:21:49,029 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 16:21:49,305 - INFO - Products loaded: 40
+2026-03-23 16:21:49,305 - INFO - E-commerce rows loaded: 211
+2026-03-23 16:21:49,306 - INFO - Local POS rows loaded: 150
+2026-03-23 16:21:49,315 - INFO - Unified raw rows: 361
+2026-03-23 16:21:49,315 - INFO - Clean rows after enrichment: 361
+2026-03-23 16:21:49,329 - INFO - Generated KPI tables: resumen_diario, por_categoria, top_productos
+2026-03-23 16:21:49,329 - INFO - Generated summary tables: tabla_dia_canal, tabla_categoria_canal
+2026-03-23 16:21:49,411 - ERROR - Pipeline failed: 'NoneType' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\pipeline.py", line 75, in run_pipeline
+    exportar_a_excel(df_raw, df_clean, kpis, tablas, output_path)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 19, in exportar_a_excel
+    _formatear_hoja_basica(ws, df_raw)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 44, in _formatear_hoja_basica
+    worksheet.freeze_panes(1, 0)  # congela la primera fila[web:176][web:187]
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not callable
+2026-03-23 16:21:49,415 - INFO - Pipeline finished in 0.39 seconds
+2026-03-23 16:25:07,683 - INFO - Starting sales Excel pipeline
+2026-03-23 16:25:07,684 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 16:25:07,972 - INFO - Products loaded: 40
+2026-03-23 16:25:07,972 - INFO - E-commerce rows loaded: 211
+2026-03-23 16:25:07,973 - INFO - Local POS rows loaded: 150
+2026-03-23 16:25:07,982 - INFO - Unified raw rows: 361
+2026-03-23 16:25:07,982 - INFO - Clean rows after enrichment: 361
+2026-03-23 16:25:07,997 - INFO - Generated KPI tables: resumen_diario, por_categoria, top_productos
+2026-03-23 16:25:07,997 - INFO - Generated summary tables: tabla_dia_canal, tabla_categoria_canal
+2026-03-23 16:25:08,049 - ERROR - Pipeline failed: 'Worksheet' object has no attribute 'autofilter'
+Traceback (most recent call last):
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\pipeline.py", line 75, in run_pipeline
+    exportar_a_excel(df_raw, df_clean, kpis, tablas, output_path)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 19, in exportar_a_excel
+    _formatear_hoja_basica(ws, df_raw)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 49, in _formatear_hoja_basica
+    worksheet.autofilter(0, 0, 0, num_cols - 1)  # solo encabezado[web:176][web:178]
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Worksheet' object has no attribute 'autofilter'. Did you mean: 'auto_filter'?
+2026-03-23 16:25:08,053 - INFO - Pipeline finished in 0.37 seconds
+2026-03-23 16:25:31,532 - INFO - Starting sales Excel pipeline
+2026-03-23 16:25:31,532 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 16:25:31,801 - INFO - Products loaded: 40
+2026-03-23 16:25:31,802 - INFO - E-commerce rows loaded: 211
+2026-03-23 16:25:31,802 - INFO - Local POS rows loaded: 150
+2026-03-23 16:25:31,810 - INFO - Unified raw rows: 361
+2026-03-23 16:25:31,811 - INFO - Clean rows after enrichment: 361
+2026-03-23 16:25:31,824 - INFO - Generated KPI tables: resumen_diario, por_categoria, top_productos
+2026-03-23 16:25:31,825 - INFO - Generated summary tables: tabla_dia_canal, tabla_categoria_canal
+2026-03-23 16:25:31,880 - ERROR - Pipeline failed: 'AutoFilter' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\pipeline.py", line 75, in run_pipeline
+    exportar_a_excel(df_raw, df_clean, kpis, tablas, output_path)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 19, in exportar_a_excel
+    _formatear_hoja_basica(ws, df_raw)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\src\load.py", line 49, in _formatear_hoja_basica
+    worksheet.auto_filter(0, 0, 0, num_cols - 1)  # solo encabezado[web:176][web:178]
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'AutoFilter' object is not callable
+2026-03-23 16:25:31,884 - INFO - Pipeline finished in 0.35 seconds
+2026-03-23 16:29:01,238 - INFO - Starting sales Excel pipeline
+2026-03-23 16:29:01,239 - INFO - Using raw data from: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\data\raw
+2026-03-23 16:29:01,317 - INFO - Products loaded: 40
+2026-03-23 16:29:01,318 - INFO - E-commerce rows loaded: 211
+2026-03-23 16:29:01,318 - INFO - Local POS rows loaded: 150
+2026-03-23 16:29:01,327 - INFO - Unified raw rows: 361
+2026-03-23 16:29:01,327 - INFO - Clean rows after enrichment: 361
+2026-03-23 16:29:01,341 - INFO - Generated KPI tables: resumen_diario, por_categoria, top_productos
+2026-03-23 16:29:01,341 - INFO - Generated summary tables: tabla_dia_canal, tabla_categoria_canal
+2026-03-23 16:29:01,538 - INFO - Excel report written to: C:\Users\LucianoR\OneDrive\Escritorio\Proyectos\Proyectos data analist\data-pipeline-commercial-sales\output\reporte_ventas_semanal.xlsx
+2026-03-23 16:29:01,538 - INFO - Pipeline finished in 0.30 seconds
