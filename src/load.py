@@ -51,8 +51,12 @@ def _formatear_hoja_basica(worksheet, df):
 
     # Ajuste de ancho de columnas...
     for idx, col in enumerate(df.columns):
-        serie = df[col].astype(str)
-        max_len = max(serie.map(len).max(), len(str(col))) + 2
+        # astype(str) deja los nulos como NaN (float) en los dtypes nuevos de
+        # pandas, y len() sobre un float rompe. Rellenamos antes de medir.
+        serie = df[col].astype(str).fillna("")
+        largos = serie.map(len)
+        max_contenido = int(largos.max()) if len(largos) else 0
+        max_len = max(max_contenido, len(str(col))) + 2
         if max_len > 50:
             max_len = 50
         worksheet.column_dimensions[get_column_letter(idx + 1)].width = max_len
