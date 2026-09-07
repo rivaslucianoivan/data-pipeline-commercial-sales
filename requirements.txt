@@ -3,3 +3,4 @@ openpyxl
 xlsxwriter
 python-dotenv
 schedule
+matplotlib
